@@ -1,0 +1,7 @@
+.weatherHighlights {
+  display: flex;
+  flex-direction: column;
+  width: 328px;
+  align-items: center;
+  color: #e7e7eb;
+}

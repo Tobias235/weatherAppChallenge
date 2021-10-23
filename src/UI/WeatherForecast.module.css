@@ -1,0 +1,18 @@
+.forecastCard {
+  width: 120px;
+  height: 177px;
+  background-color: #1e213a;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #e7e7eb;
+}
+
+.forecastCard img {
+  width: 62px;
+  margin-bottom: 31px;
+}
+
+.forecastCard span {
+  margin: 10px;
+}

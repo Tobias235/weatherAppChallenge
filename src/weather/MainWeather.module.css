@@ -1,0 +1,73 @@
+.mainWeather {
+  width: 70%;
+  height: 100vh;
+  background-color: #100e1d;
+}
+
+.mainContainer {
+  width: 70%;
+  margin: auto;
+  margin-top: 32px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 46px;
+}
+
+.btnContainer :first-child {
+  margin-right: 12px;
+}
+
+.forecastContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.highlightTitle {
+  font-family: "Raleway", "sans-serif";
+  color: #e7e7eb;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 42px;
+}
+
+.weatherHighlights {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.highlight h1 {
+  margin: 10px;
+}
+
+.highlight p {
+  margin: 0;
+  margin-top: 15px;
+}
+
+.highlight input {
+  width: 65%;
+  margin: auto;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.weatherHighlightsLower {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lowerHighlight p {
+  margin: 0;
+  margin-top: 15px;
+}
+
+.lowerHighlight h1 {
+  margin: 0;
+  margin-bottom: 25px;
+}
