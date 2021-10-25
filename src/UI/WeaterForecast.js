@@ -8,8 +8,8 @@ const WeatherForecast = (props) => {
       <p>Tomorrow</p>
       <img src={cloudy} alt="Weather symbol" />
       <div>
-        <span>16C</span>
-        <span>11C</span>
+        <span>16°C</span>
+        <span>11°C</span>
       </div>
     </Card>
   );
