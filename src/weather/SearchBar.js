@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import { useState } from "react";
 
+=======
+>>>>>>> 25c8f063977692c5601bdeb7eb20e0c1aa1d301c
 import styles from "./SearchBar.module.css";
 import picture from "../assets/Shower.png";
 
 import Button from "../UI/Button";
+<<<<<<< HEAD
 import Modal from "./modal/Modal";
 
 const SearchBar = (props) => {
@@ -26,6 +30,17 @@ const SearchBar = (props) => {
           <button onClick={handleSearchButton} className={styles.searchBtn}>
             Search for places
           </button>
+=======
+
+const SearchBar = (props) => {
+  return (
+    <div className={styles.searchBar}>
+      <div className={styles.cloudBackground}></div>
+
+      <div className={styles.searchBarContainer}>
+        <div className={styles.btnContainer}>
+          <button className={styles.searchBtn}>Search for places</button>
+>>>>>>> 25c8f063977692c5601bdeb7eb20e0c1aa1d301c
           <Button className={styles.geoLocation}>
             <span className="material-icons">my_location</span>
           </Button>
