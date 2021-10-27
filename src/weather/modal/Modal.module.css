@@ -1,0 +1,99 @@
+@media only screen and (max-width: 749px) {
+  .searchModal {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    background-color: #1e213a;
+    z-index: 3;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 750px) {
+  .searchModal {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 40%;
+    height: auto;
+    position: fixed;
+    background-color: #1e213a;
+    z-index: 3;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .searchModal {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 25%;
+    height: auto;
+    position: fixed;
+    background-color: #1e213a;
+    z-index: 3;
+  }
+}
+
+.closeBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.closeBtn button {
+  color: #e7e7eb;
+  background-color: transparent;
+  border: none;
+}
+
+.searchModalBtn {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 38px;
+}
+
+.searchModalBtn input {
+  width: 70%;
+  height: 48px;
+  background-color: transparent;
+  border: 1px solid #e7e7eb;
+}
+
+.searchModalBtn button {
+  width: 25%;
+  height: 48px;
+  background-color: #3c47e9;
+  color: #e7e7eb;
+  border: none;
+  font-size: 16px;
+}
+
+.searchOptionList {
+  width: 100%;
+  margin: auto;
+  color: white;
+}
+
+.listOption {
+  width: 90%;
+  margin: auto;
+  height: 64px;
+  margin-bottom: 30px;
+  border: 1px solid transparent;
+}
+
+.listOption:hover {
+  border: 1px solid #616475;
+}
+
+.searchOptionList p {
+  margin-left: 10px;
+}
