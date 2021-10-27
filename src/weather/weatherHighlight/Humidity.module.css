@@ -30,13 +30,37 @@
   font-size: 36px;
 }
 
-.humidity span {
+.windSpeed {
   font-size: 64px;
   font-weight: 700;
 }
 
-.humidity input {
-  height: 8px;
+.percentage {
   width: 70%;
-  border-radius: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.percentageSign {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.humidity progress {
+  width: 70%;
+  appearance: none;
+}
+
+::-webkit-progress-bar {
+  height: 10px;
+  border-radius: 20px;
+  background-color: #e7e7eb;
+}
+
+::-webkit-progress-value {
+  height: 10px;
+  border-radius: 20px;
+  background-color: #ffec65;
 }
