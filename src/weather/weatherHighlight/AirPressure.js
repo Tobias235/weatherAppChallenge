@@ -6,7 +6,7 @@ const AirPressure = (props) => {
     <Card className={styles.airPressure}>
       <p>Air Pressure</p>
       <h1>
-        <span>998</span>mb
+        <span>{props.airPressure}</span>mb
       </h1>
     </Card>
   );

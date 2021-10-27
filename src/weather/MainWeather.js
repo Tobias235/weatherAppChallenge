@@ -20,7 +20,7 @@ const MainWeather = (props) => {
         </div>
         <h1 className={styles.highlightTitle}>Today's Highlights</h1>
         <div className={styles.weatherHighlights}>
-          <WeatherHighlights />
+          <WeatherHighlights weatherHighlights={props.weatherHighlights} />
         </div>
       </div>
       <footer>

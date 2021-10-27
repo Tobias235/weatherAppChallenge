@@ -5,15 +5,23 @@ import Wind from "./weatherHighlight/Wind";
 import styles from "./WeatherHighlights.module.css";
 
 const WeatherHighlights = (props) => {
+  console.log(props.weatherHighlights);
+  const wind = {
+    speed: props.weatherHighlights.wind,
+    direction: props.weatherHighlights.windDirection,
+  };
+  const humidity = props.weatherHighlights.humidity;
+  const visibility = props.weatherHighlights.visibility;
+  const airPressure = props.weatherHighlights.airPressure;
   return (
     <div className={styles.highlightsContainer}>
       <div className={styles.row}>
-        <Wind />
-        <Humidity />
+        <Wind wind={wind} />
+        <Humidity humidity={humidity} />
       </div>
       <div className={styles.row}>
-        <Visibilty />
-        <AirPressure />
+        <Visibilty visibility={visibility} />
+        <AirPressure airPressure={airPressure} />
       </div>
     </div>
   );
