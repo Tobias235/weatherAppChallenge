@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @media only screen and (max-width: 1000px) and (min-width: 733px) {
   .searchBar {
     display: flex;
@@ -8,8 +7,6 @@
   }
 }
 
-=======
->>>>>>> 25c8f063977692c5601bdeb7eb20e0c1aa1d301c
 @media only screen and (max-width: 749px) {
   .searchBar {
     display: flex;
@@ -17,10 +14,7 @@
     width: 100%;
     height: 100vh;
     background-color: #1e213a;
-<<<<<<< HEAD
     z-index: 2;
-=======
->>>>>>> 25c8f063977692c5601bdeb7eb20e0c1aa1d301c
   }
 
   .cloudBackground {
@@ -112,16 +106,11 @@
   }
 }
 
-<<<<<<< HEAD
 @media only screen and (min-width: 1001px) {
-=======
-@media only screen and (min-width: 750px) {
->>>>>>> 25c8f063977692c5601bdeb7eb20e0c1aa1d301c
   .searchBar {
     display: flex;
     align-items: center;
     width: 25%;
-<<<<<<< HEAD
     background-color: #1e213a;
   }
 }
@@ -215,102 +204,4 @@
 .location :first-child {
   margin-right: 5px;
   vertical-align: middle;
-=======
-    height: 100vh;
-    background-color: #1e213a;
-  }
-
-  .cloudBackground {
-    position: absolute;
-    top: 10%;
-    width: 37%;
-    height: 85%;
-    background-image: url(../assets/Cloud-background.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: -100px 0;
-    opacity: 0.1;
-    z-index: 1;
-  }
-
-  .searchBarContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 91vh;
-    z-index: 2;
-    color: #e7e7eb;
-  }
-
-  .btnContainer {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-  }
-
-  .searchBtn {
-    width: 45%;
-    font-weight: 500;
-    font-size: 16px;
-    color: #e7e7eb;
-    background: #6e707a;
-    border: none;
-  }
-
-  .geoLocation {
-    color: #e7e7eb;
-    background: #6e707a;
-  }
-
-  .geoLocation span {
-    vertical-align: middle;
-  }
-
-  .searchBar img {
-    width: 50%;
-  }
-
-  .searchBarContainer h1 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 48px;
-    font-weight: 100;
-  }
-
-  .searchBarTemp {
-    font-size: 144px;
-    font-weight: 500;
-  }
-
-  .searchBarContainer p {
-    color: #a09fb1;
-    font-weight: 600;
-    font-size: 36px;
-    margin: 0;
-  }
-
-  .searchBarDay {
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
-    color: #88869d;
-    font-size: 18px;
-    font-weight: 500;
-  }
-
-  .location {
-    margin-top: 20px;
-    color: #88869d;
-    font-size: 18px;
-    font-weight: 500;
-  }
-
-  .location :first-child {
-    margin-right: 5px;
-    vertical-align: middle;
-  }
->>>>>>> 25c8f063977692c5601bdeb7eb20e0c1aa1d301c
 }
