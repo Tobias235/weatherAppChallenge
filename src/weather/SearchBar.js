@@ -1,14 +1,9 @@
-import { useState } from "react";
-
 import styles from "./SearchBar.module.css";
-import picture from "../assets/Shower.png";
-
 import Button from "../UI/Button";
-import Modal from "./modal/Modal";
+import ImageFilter from "../utilities/ImageFilter";
 
 const SearchBar = (props) => {
-  const [showModal, setShowModal] = useState(false);
-
+  const image = ImageFilter(props.weatherData.icon);
   const date = new Date();
   const dateArray = date.toDateString().split(" ");
   const showDate = {
@@ -17,29 +12,22 @@ const SearchBar = (props) => {
     month: dateArray[1].toString(),
   };
 
-  const handleSearchButton = (e) => {
-    setShowModal(true);
-    console.log(props.weatherData);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-
   return (
     <div className={styles.searchBar}>
-      {showModal && <Modal onClick={handleCloseModal} />}
       <div className={styles.cloudBackground}></div>
       <div className={styles.searchBarContainer}>
         <div className={styles.btnContainer}>
-          <button onClick={handleSearchButton} className={styles.searchBtn}>
+          <button onClick={props.onHandleModal} className={styles.searchBtn}>
             Search for places
           </button>
           <Button className={styles.geoLocation}>
             <span className="material-icons">my_location</span>
           </Button>
         </div>
-        <img src={picture} alt="current weather" />
+        <img
+          src={require(`../assets/${image}`).default}
+          alt="current weather"
+        />
         <h1>
           <span className={styles.searchBarTemp}>
             {parseInt(props.weatherData.temperature)}

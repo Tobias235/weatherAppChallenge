@@ -9,8 +9,12 @@ const Modal = (props) => {
         </button>
       </div>
       <div className={styles.searchModalBtn}>
-        <input type="text" placeholder="search location" />{" "}
-        <button>Search</button>
+        <input
+          className={styles.input}
+          type="text"
+          placeholder="search location"
+        />
+        <button onClick={props.onSearch}>Search</button>
       </div>
       <div className={styles.searchOptionList}>
         <div className={styles.listOption}>

@@ -3,19 +3,26 @@
     margin-bottom: 25px;
   }
 }
+
+.dailyForecast {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .forecastCard {
-  width: 120px;
-  height: 170px;
-  background-color: #1e213a;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 10px;
+  width: 120px;
+  height: 170px;
+  background-color: #1e213a;
 }
 
 .forecastCard img {
   width: 62px;
-  margin-bottom: 35px;
+  height: 62px;
+  margin-bottom: 30px;
 }
 
 .forecastCard span {

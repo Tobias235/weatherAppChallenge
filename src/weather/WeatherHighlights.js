@@ -5,7 +5,6 @@ import Wind from "./weatherHighlight/Wind";
 import styles from "./WeatherHighlights.module.css";
 
 const WeatherHighlights = (props) => {
-  console.log(props.weatherHighlights);
   const wind = {
     speed: props.weatherHighlights.wind,
     direction: props.weatherHighlights.windDirection,

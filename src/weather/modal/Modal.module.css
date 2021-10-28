@@ -60,11 +60,13 @@
   margin-bottom: 38px;
 }
 
-.searchModalBtn input {
+.input {
   width: 70%;
   height: 48px;
   background-color: transparent;
   border: 1px solid #e7e7eb;
+  color: #e7e7eb;
+  padding: 10px;
 }
 
 .searchModalBtn button {

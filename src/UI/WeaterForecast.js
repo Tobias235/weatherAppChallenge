@@ -1,18 +1,42 @@
 import Card from "./Card";
 import styles from "./WeatherForecast.module.css";
-import snow from "../assets/Snow.png";
+import ImageFilter from "../utilities/ImageFilter";
 
 const WeatherForecast = (props) => {
-  return (
-    <Card className={styles.forecastCard}>
-      <p>Tomorrow</p>
-      <img src={snow} alt="Weather symbol" />
-      <div>
-        <span>16°C</span>
-        <span>11°C</span>
-      </div>
-    </Card>
-  );
+  const fiveForecast = props.forecast
+    .filter((item, index) => index < 6)
+    .filter((item, index) => index !== 0);
+
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const nextDay = tomorrow.toString().split(" ");
+
+  const card = fiveForecast.map((forecast) => {
+    const image = ImageFilter(forecast.weather[0].icon);
+    let showDate;
+    const date = new Date(forecast.dt * 1000);
+    const dateArray = date.toString().split(" ");
+    if (nextDay[2] === dateArray[2]) {
+      showDate = "Tomorrow";
+    } else {
+      showDate = `${dateArray[0]} ${dateArray[2]} ${dateArray[1]}`;
+    }
+    return (
+      <Card className={styles.forecastCard} key={forecast.dt}>
+        <p>{showDate}</p>
+        <img
+          src={require(`./../assets/${image}`).default}
+          alt="Weather symbol"
+        />
+        <div>
+          <span>{parseInt(forecast.temp.max)}°C</span>
+          <span>{parseInt(forecast.temp.min)}°C</span>
+        </div>
+      </Card>
+    );
+  });
+  return <div className={styles.dailyForecast}> {card} </div>;
 };
 
 export default WeatherForecast;

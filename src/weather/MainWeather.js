@@ -12,11 +12,7 @@ const MainWeather = (props) => {
           <Button>°F</Button>
         </div>
         <div className={styles.forecastContainer}>
-          <WeatherForecast></WeatherForecast>
-          <WeatherForecast></WeatherForecast>
-          <WeatherForecast></WeatherForecast>
-          <WeatherForecast></WeatherForecast>
-          <WeatherForecast></WeatherForecast>
+          <WeatherForecast forecast={props.forecast} />
         </div>
         <h1 className={styles.highlightTitle}>Today's Highlights</h1>
         <div className={styles.weatherHighlights}>
