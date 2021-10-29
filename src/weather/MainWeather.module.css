@@ -56,10 +56,10 @@
   }
 }
 
-@media only screen and (max-width: 1000px) and (min-width: 733px) {
+@media only screen and (max-width: 1000px) and (min-width: 750px) {
   .mainWeather {
     width: 60%;
-    height: 100%;
+    height: auto;
     background-color: #100e1d;
     z-index: 2;
   }

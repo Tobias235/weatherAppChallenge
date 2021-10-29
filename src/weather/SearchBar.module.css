@@ -109,8 +109,8 @@
 @media only screen and (min-width: 1001px) {
   .searchBar {
     display: flex;
-    align-items: center;
     width: 25%;
+    height: auto;
     background-color: #1e213a;
   }
 }
@@ -133,7 +133,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
   z-index: 2;
   color: #e7e7eb;
   margin-top: 32px;
@@ -165,7 +164,7 @@
 }
 
 .searchBar img {
-  width: 50%;
+  width: 150px;
 }
 
 .searchBarContainer h1 {
