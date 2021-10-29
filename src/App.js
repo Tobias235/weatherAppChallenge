@@ -28,8 +28,7 @@ function App() {
 
   const fetchLocationCoords = async (location) => {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric
-      `
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
     );
 
     if (!response.ok) {
@@ -47,7 +46,7 @@ function App() {
   useEffect(() => {
     const fetchWeatherData = async (location) => {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=hourly,minutely&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=hourly,minutely&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
       );
 
       if (!response.ok) {
