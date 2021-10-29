@@ -12,6 +12,8 @@ const SearchBar = (props) => {
     month: dateArray[1].toString(),
   };
 
+  const city = props.city ? props.city : "Stockholm";
+
   return (
     <div className={styles.searchBar}>
       <div className={styles.cloudBackground}></div>
@@ -45,7 +47,7 @@ const SearchBar = (props) => {
         </div>
         <div className={styles.location}>
           <span className="material-icons">place</span>
-          <span>{props.weatherData.city}</span>
+          <span>{city}</span>
         </div>
       </div>
     </div>

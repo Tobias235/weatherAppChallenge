@@ -1,0 +1,18 @@
+.searchOptionList {
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  padding: 0px;
+}
+
+.listOption {
+  padding: 1rem;
+  color: rgb(231, 231, 235);
+  margin-bottom: 1rem;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.listOption:hover {
+  border: 1px solid #616475;
+}

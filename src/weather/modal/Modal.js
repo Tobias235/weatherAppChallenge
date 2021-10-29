@@ -1,32 +1,25 @@
 import styles from "./Modal.module.css";
+import SearchList from "./SearchList";
 
 const Modal = (props) => {
   return (
     <div className={styles.searchModal}>
       <div className={styles.closeBtn}>
-        <button type="button" onClick={props.onClick}>
+        <button type="button" onClick={props.onClose}>
           <span className="material-icons">close</span>
         </button>
       </div>
-      <div className={styles.searchModalBtn}>
+      <form className={styles.searchModalBtn} onSubmit={props.onSearch}>
         <input
           className={styles.input}
           type="text"
           placeholder="search location"
         />
-        <button onClick={props.onSearch}>Search</button>
-      </div>
-      <div className={styles.searchOptionList}>
-        <div className={styles.listOption}>
-          <p>London</p>
-        </div>
-        <div className={styles.listOption}>
-          <p>Barcelona</p>
-        </div>
-        <div className={styles.listOption}>
-          <p>Long Beach</p>
-        </div>
-      </div>
+        <button type="button" onClick={props.onSearch}>
+          Search
+        </button>
+      </form>
+      <SearchList searches={props.searches} />
     </div>
   );
 };

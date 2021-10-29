@@ -77,25 +77,3 @@
   border: none;
   font-size: 16px;
 }
-
-.searchOptionList {
-  width: 100%;
-  margin: auto;
-  color: white;
-}
-
-.listOption {
-  width: 90%;
-  margin: auto;
-  height: 64px;
-  margin-bottom: 30px;
-  border: 1px solid transparent;
-}
-
-.listOption:hover {
-  border: 1px solid #616475;
-}
-
-.searchOptionList p {
-  margin-left: 10px;
-}
