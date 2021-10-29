@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import MainWeather from "./weather/MainWeather";
 import SearchBar from "./weather/SearchBar";
 import Modal from "./weather/modal/Modal";
-
+require("dotenv").config();
 function App() {
   const [coords, setCoords] = useState({
     lat: "59.3293",
