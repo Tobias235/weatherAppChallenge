@@ -14,6 +14,10 @@ const SearchBar = (props) => {
 
   const city = props.city ? props.city : "Stockholm";
 
+  const currentTemp = props.weatherData.temperature;
+  const unit = props.unit === "°F" ? true : false;
+  const temp = unit ? currentTemp * 1.8 + 32 : currentTemp;
+
   return (
     <div className={styles.searchBar}>
       <div className={styles.cloudBackground}></div>
@@ -31,10 +35,8 @@ const SearchBar = (props) => {
           alt="current weather"
         />
         <h1>
-          <span className={styles.searchBarTemp}>
-            {parseInt(props.weatherData.temperature)}
-          </span>
-          °C
+          <span className={styles.searchBarTemp}>{temp.toFixed(0)}</span>
+          {props.unit}
         </h1>
         <p>{props.weatherData.weather}</p>
         <div className={styles.searchBarDay}>

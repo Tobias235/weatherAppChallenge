@@ -25,11 +25,16 @@ const Wind = (props) => {
   const style = {
     transform: `rotate(${props.wind.direction}deg)`,
   };
+
+  const unit = props.unit === "°F" ? true : false;
+  const imperial = unit ? "mph" : "m/s";
+
   return (
     <Card className={styles.wind}>
       <p>Wind Status</p>
       <h1>
-        <span className={styles.windSpeed}>{props.wind.speed}</span>m/s
+        <span className={styles.windSpeed}>{props.wind.speed} </span>
+        {imperial}
       </h1>
       <div>
         <span style={style} className="material-icons">

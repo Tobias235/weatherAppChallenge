@@ -15,11 +15,11 @@ const WeatherHighlights = (props) => {
   return (
     <div className={styles.highlightsContainer}>
       <div className={styles.row}>
-        <Wind wind={wind} />
+        <Wind wind={wind} unit={props.unit} />
         <Humidity humidity={humidity} />
       </div>
       <div className={styles.row}>
-        <Visibilty visibility={visibility} />
+        <Visibilty visibility={visibility} unit={props.unit} />
         <AirPressure airPressure={airPressure} />
       </div>
     </div>

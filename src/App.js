@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import MainWeather from "./weather/MainWeather";
 import SearchBar from "./weather/SearchBar";
 import Modal from "./weather/modal/Modal";
-
 function App() {
   const [coords, setCoords] = useState({
     lat: "59.3293",
@@ -25,10 +24,11 @@ function App() {
   });
   const [forecast, setForecast] = useState([]);
   const [search, setSearch] = useState([]);
+  const [unit, setUnit] = useState("°C");
 
   const fetchLocationCoords = async (location) => {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
     );
 
     if (!response.ok) {
@@ -46,7 +46,7 @@ function App() {
   useEffect(() => {
     const fetchWeatherData = async (location) => {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=hourly,minutely&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=hourly,minutely&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
       );
 
       if (!response.ok) {
@@ -94,8 +94,13 @@ function App() {
   };
 
   const handlePrevSearch = (e) => {
-    fetchLocationCoords(e.target.textContent);
-    setShowModal(false);
+    e.oreventDefault();
+    // fetchLocationCoords(e.target.textContent);
+    // setShowModal(false);
+  };
+
+  const handleConvert = (data) => {
+    setUnit(data);
   };
 
   return (
@@ -104,6 +109,7 @@ function App() {
         weatherData={currentWeather}
         city={city}
         onHandleModal={handleSearchButton}
+        unit={unit}
       />
       {showModal && (
         <Modal
@@ -113,7 +119,12 @@ function App() {
           searches={search}
         />
       )}
-      <MainWeather weatherHighlights={highlights} forecast={forecast} />
+      <MainWeather
+        weatherHighlights={highlights}
+        forecast={forecast}
+        onConvert={handleConvert}
+        unit={unit}
+      />
     </div>
   );
 }
