@@ -8,12 +8,19 @@ const MainWeather = (props) => {
     props.onConvert(e.target.textContent);
   };
 
+  const stylingF = props.unit === "°F" ? styles.active : null;
+  const stylingC = props.unit === "°C" ? styles.active : null;
+
   return (
     <div className={styles.mainWeather}>
       <div className={styles.mainContainer}>
         <div className={styles.btnContainer}>
-          <Button onClick={handleChangeUnit}>°C</Button>
-          <Button onClick={handleChangeUnit}>°F</Button>
+          <Button className={stylingC} onClick={handleChangeUnit}>
+            °C
+          </Button>
+          <Button className={stylingF} onClick={handleChangeUnit}>
+            °F
+          </Button>
         </div>
         <div className={styles.forecastContainer}>
           <WeatherForecast forecast={props.forecast} unit={props.unit} />

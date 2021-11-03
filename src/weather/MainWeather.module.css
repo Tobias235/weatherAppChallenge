@@ -142,3 +142,8 @@ footer a {
   text-decoration: none;
   text-decoration: underline;
 }
+
+.active {
+  background-color: #e7e7eb !important;
+  color: #110e3c !important;
+}
