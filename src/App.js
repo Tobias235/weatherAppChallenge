@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import MainWeather from "./weather/MainWeather";
 import SearchBar from "./weather/SearchBar";
-import Modal from "./weather/modal/Modal";
+import Modal from "./modal/Modal";
 function App() {
   const [coords, setCoords] = useState({
     lat: "59.3293",
@@ -79,24 +79,23 @@ function App() {
     setShowModal(false);
   };
 
-  const handleSearchLocation = (e) => {
-    const parent = e.currentTarget.parentElement;
-    let searchValue = parent.children[0].value;
-    if (searchValue.trim() === "") {
+  const handleSearchLocation = (city) => {
+    let newSearchArray = [...search];
+    if (newSearchArray.includes(city)) {
+      fetchLocationCoords(city);
       setShowModal(false);
-      console.log("Its empty");
+      return;
     } else {
-      const newSearchArray = [...search, searchValue].reverse();
+      newSearchArray = [...search, city].reverse();
       setSearch(newSearchArray);
-      fetchLocationCoords(searchValue);
+      fetchLocationCoords(city);
       setShowModal(false);
     }
   };
 
   const handlePrevSearch = (e) => {
-    e.oreventDefault();
-    // fetchLocationCoords(e.target.textContent);
-    // setShowModal(false);
+    fetchLocationCoords(e.target.textContent);
+    setShowModal(false);
   };
 
   const handleConvert = (data) => {

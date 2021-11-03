@@ -5,7 +5,11 @@ const SearchList = (props) => {
     <ul className={styles.searchOptionList}>
       {props.searches.map((search) => {
         return (
-          <li className={styles.listOption} onClick={props.onPrevSearch}>
+          <li
+            className={styles.listOption}
+            onClick={props.onPrevSearch}
+            key={Math.random()}
+          >
             {search}
           </li>
         );
