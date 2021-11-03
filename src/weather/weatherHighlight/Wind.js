@@ -37,10 +37,10 @@ const Wind = (props) => {
         {imperial}
       </h1>
       <div>
-        <span style={style} className="material-icons">
+        <span style={style} className={`${"material-icons"} ${styles.icon}`}>
           navigation
         </span>
-        <span>{windDirection}</span>
+        <span className={styles.direction}>{windDirection}</span>
       </div>
     </Card>
   );

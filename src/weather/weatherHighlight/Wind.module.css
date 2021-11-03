@@ -37,3 +37,13 @@
   font-size: 64px;
   font-weight: 700;
 }
+
+.icon {
+  vertical-align: middle;
+  margin: 5px;
+}
+
+.direction {
+  font-weight: 500;
+  font-size: 14px;
+}
