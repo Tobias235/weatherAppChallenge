@@ -6,12 +6,12 @@ import styles from "./WeatherHighlights.module.css";
 
 const WeatherHighlights = (props) => {
   const wind = {
-    speed: props.weatherHighlights.wind,
-    direction: props.weatherHighlights.windDirection,
+    speed: props.weatherHighlights.wind_speed,
+    direction: props.weatherHighlights.wind_deg,
   };
   const humidity = props.weatherHighlights.humidity;
   const visibility = props.weatherHighlights.visibility;
-  const airPressure = props.weatherHighlights.airPressure;
+  const airPressure = props.weatherHighlights.pressure;
   return (
     <div className={styles.highlightsContainer}>
       <div className={styles.row}>

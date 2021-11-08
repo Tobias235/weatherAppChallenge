@@ -3,7 +3,7 @@ import Button from "../UI/Button";
 import ImageFilter from "../utilities/ImageFilter";
 
 const SearchBar = (props) => {
-  const image = ImageFilter(props.weatherData.icon);
+  const image = ImageFilter(props.weatherData.weather[0].icon);
   const date = new Date();
   const dateArray = date.toDateString().split(" ");
   const showDate = {
@@ -14,7 +14,7 @@ const SearchBar = (props) => {
 
   const city = props.city ? props.city : "Stockholm";
 
-  const currentTemp = props.weatherData.temperature;
+  const currentTemp = props.weatherData.temp;
   const unit = props.unit === "°F" ? true : false;
   const temp = unit ? currentTemp * 1.8 + 32 : currentTemp;
 
@@ -38,7 +38,7 @@ const SearchBar = (props) => {
           <span className={styles.searchBarTemp}>{temp.toFixed(0)}</span>
           {props.unit}
         </h1>
-        <p>{props.weatherData.weather}</p>
+        <p>{props.weatherData.weather[0].description}</p>
         <div className={styles.searchBarDay}>
           <span>Today</span>
           <span>•</span>
