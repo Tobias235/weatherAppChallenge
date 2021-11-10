@@ -28,12 +28,13 @@ const Wind = (props) => {
 
   const unit = props.unit === "°F" ? true : false;
   const imperial = unit ? "mph" : "m/s";
+  const speed = unit ? props.wind.speed * 2.237 : props.wind.speed;
 
   return (
     <Card className={styles.wind}>
       <p>Wind Status</p>
       <h1>
-        <span className={styles.windSpeed}>{props.wind.speed} </span>
+        <span className={styles.windSpeed}>{speed.toFixed(2)} </span>
         {imperial}
       </h1>
       <div>

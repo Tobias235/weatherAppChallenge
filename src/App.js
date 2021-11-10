@@ -5,10 +5,11 @@ import SearchBar from "./weather/SearchBar";
 import Modal from "./modal/Modal";
 import useGetData from "./hooks/useGetData";
 
-import GetUserLocation from "./utilities/GetUserLocation";
-
 function App() {
-  const [location, setLocation] = useState("stockholm");
+  const [location, setLocation] = useState({
+    location: "stockholm",
+    userLocation: true,
+  });
   const [showModal, setShowModal] = useState(false);
   const [search, setSearch] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -32,8 +33,15 @@ function App() {
     setShowModal(false);
   };
 
+  const handleGetLocation = () => {
+    setLocation({
+      location: city,
+      userLocation: !location.userLocation,
+    });
+  };
+
   const handleSearchLocation = (city) => {
-    setLocation(city);
+    setLocation({ location: city, userLocation: location.userLocation });
     let newSearchArray = [...search];
     if (newSearchArray.includes(city)) {
       setShowModal(false);
@@ -46,7 +54,10 @@ function App() {
   };
 
   const handlePrevSearch = (e) => {
-    // fetchLocationCoords(e.target.textContent);
+    setLocation({
+      location: e.target.textContent,
+      userLocation: location.userLocation,
+    });
     setShowModal(false);
   };
 
@@ -61,6 +72,7 @@ function App() {
           weatherData={currentWeather}
           city={city}
           onHandleModal={handleSearchButton}
+          onGetLocation={handleGetLocation}
           unit={unit}
         />
       )}

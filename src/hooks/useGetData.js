@@ -6,15 +6,52 @@ const useFetch = (location) => {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [city, setCity] = useState();
 
-  useEffect(() => {
-    if (location.trim() === "") {
-      return;
-    }
-    const fetchDataCoords = async () => {
-      const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
-      );
+  let searchLocation = location.location;
+  let userLocation = location.userLocation;
 
+  useEffect(() => {
+    const getUserLocation = async (position) => {
+      let userLocationCoords = {
+        lat: position.coords.latitude.toFixed(4),
+        lon: position.coords.longitude.toFixed(4),
+      };
+
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/find?lat=${userLocationCoords.lat}&lon=${userLocationCoords.lon}&cnt=1&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
+      );
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
+      const responseData = await response.json();
+      setCity(responseData.list[0].name);
+      setCoords(userLocationCoords);
+    };
+
+    const userLocationError = (error) => {
+      if (error.code === error.PERMISSION_DENIED) {
+        return;
+      }
+    };
+
+    const options = {
+      enableHighAccuracy: true,
+    };
+
+    navigator.geolocation.getCurrentPosition(
+      getUserLocation,
+      userLocationError,
+      options
+    );
+  }, [userLocation]);
+
+  useEffect(() => {
+    const getLocationByCity = async () => {
+      if (searchLocation.trim() === "") {
+        return;
+      }
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${searchLocation}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`
+      );
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
@@ -22,8 +59,8 @@ const useFetch = (location) => {
       setCoords(responseData.coord);
       setCity(responseData.name);
     };
-    fetchDataCoords();
-  }, [location]);
+    getLocationByCity();
+  }, [searchLocation]);
 
   useEffect(() => {
     if (!coords) {
