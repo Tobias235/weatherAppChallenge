@@ -1,21 +1,27 @@
 import styles from "./SearchList.module.css";
 
 const SearchList = (props) => {
-  const searchArray = JSON.parse(localStorage.getItem("SearchesList"));
-
+  let searchArray = JSON.parse(localStorage.getItem("SearchesList"));
+  let render = false;
+  if (searchArray) {
+    render = true;
+    searchArray.reverse();
+    searchArray = searchArray.filter((item, index) => index < 5);
+  }
   return (
     <ul className={styles.searchOptionList}>
-      {searchArray.map((search) => {
-        return (
-          <li
-            className={styles.listOption}
-            onClick={props.onPrevSearch}
-            key={Math.random()}
-          >
-            {search}
-          </li>
-        );
-      })}
+      {render &&
+        searchArray.map((search) => {
+          return (
+            <li
+              className={styles.listOption}
+              onClick={props.onPrevSearch}
+              key={Math.random()}
+            >
+              {search}
+            </li>
+          );
+        })}
     </ul>
   );
 };
