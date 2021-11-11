@@ -56,6 +56,7 @@ const useFetch = (location) => {
         throw new Error("Something went wrong!");
       }
       const responseData = await response.json();
+
       setCoords(responseData.coord);
       setCity(responseData.name);
     };

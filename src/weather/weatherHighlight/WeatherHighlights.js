@@ -1,7 +1,7 @@
-import AirPressure from "./weatherHighlight/AirPressure";
-import Humidity from "./weatherHighlight/Humidity";
-import Visibilty from "./weatherHighlight/Visibility";
-import Wind from "./weatherHighlight/Wind";
+import AirPressure from "./AirPressure";
+import Humidity from "./Humidity";
+import Visibilty from "./Visibility";
+import Wind from "./Wind";
 import styles from "./WeatherHighlights.module.css";
 
 const WeatherHighlights = (props) => {

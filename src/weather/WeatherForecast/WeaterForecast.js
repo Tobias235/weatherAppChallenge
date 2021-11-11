@@ -1,13 +1,12 @@
-import Card from "./Card";
+import Card from "../../UI/Card";
 import styles from "./WeatherForecast.module.css";
-import ImageFilter from "../utilities/ImageFilter";
-import TemperatureUnitConverter from "../utilities/TemperatureUnitConverter";
+import ImageFilter from "../../utilities/ImageFilter";
+import TemperatureUnitConverter from "../../utilities/TemperatureUnitConverter";
 
 const WeatherForecast = (props) => {
   const fiveForecast = props.forecast
     .filter((item, index) => index < 6)
     .filter((item, index) => index !== 0);
-  const currentUnit = props.unit;
 
   const today = new Date();
   const tomorrow = new Date(today);
@@ -17,7 +16,7 @@ const WeatherForecast = (props) => {
   const card = fiveForecast.map((forecast) => {
     const image = ImageFilter(forecast.weather[0].icon);
     const unitConverter = TemperatureUnitConverter(
-      currentUnit,
+      props.unit,
       forecast.temp.min,
       forecast.temp.max
     );
@@ -33,17 +32,17 @@ const WeatherForecast = (props) => {
       <Card className={styles.forecastCard} key={forecast.dt}>
         <p>{showDate}</p>
         <img
-          src={require(`./../assets/${image}`).default}
+          src={require(`../../assets/${image}`).default}
           alt="Weather symbol"
         />
         <div>
           <span>
             {unitConverter.max.toFixed(0)}
-            {currentUnit}
+            {props.unit}
           </span>
           <span>
             {unitConverter.min.toFixed(0)}
-            {currentUnit}
+            {props.unit}
           </span>
         </div>
       </Card>

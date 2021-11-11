@@ -1,7 +1,7 @@
 import Button from "../UI/Button";
-import WeatherForecast from "../UI/WeaterForecast";
+import WeatherForecast from "./WeatherForecast/WeaterForecast";
 import styles from "./MainWeather.module.css";
-import WeatherHighlights from "./WeatherHighlights";
+import WeatherHighlights from "./weatherHighlight/WeatherHighlights";
 
 const MainWeather = (props) => {
   const handleChangeUnit = (e) => {
