@@ -1,11 +1,9 @@
 import styles from "./SearchList.module.css";
 
 const SearchList = (props) => {
-  const searchArray = JSON.parse(
-    localStorage.getItem("SearchesList")
-  ).reverse();
-  const searches = searchArray.filter((item, index) => index < 5);
-
+  const searchArray = JSON.parse(localStorage.getItem("SearchesList"));
+  let searches = searchArray.filter((item, index) => index < 5);
+  searches.reverse();
   return (
     <ul className={styles.searchOptionList}>
       {searches.map((search) => {
