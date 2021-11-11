@@ -47,7 +47,8 @@ function App() {
       setShowModal(false);
       return;
     } else {
-      newSearchArray = [...search, city].reverse();
+      newSearchArray = [...search, city];
+      localStorage.setItem("SearchesList", JSON.stringify(newSearchArray));
       setSearch(newSearchArray);
       setShowModal(false);
     }
@@ -81,7 +82,6 @@ function App() {
           onClose={handleCloseModal}
           onSearch={handleSearchLocation}
           onPrevSearch={handlePrevSearch}
-          searches={search}
         />
       )}
       {!loading && (
