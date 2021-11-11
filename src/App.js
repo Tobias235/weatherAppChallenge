@@ -42,12 +42,16 @@ function App() {
 
   const handleSearchLocation = (city) => {
     setLocation({ location: city, userLocation: location.userLocation });
+
     let newSearchArray = [...search];
     if (newSearchArray.includes(city)) {
       setShowModal(false);
       return;
     } else {
       newSearchArray = [...search, city];
+      if (newSearchArray.length > 5) {
+        newSearchArray.shift();
+      }
       localStorage.setItem("SearchesList", JSON.stringify(newSearchArray));
       setSearch(newSearchArray);
       setShowModal(false);

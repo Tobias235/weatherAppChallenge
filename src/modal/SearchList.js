@@ -2,11 +2,10 @@ import styles from "./SearchList.module.css";
 
 const SearchList = (props) => {
   let searchArray = JSON.parse(localStorage.getItem("SearchesList"));
-  let render = false;
+  let render;
   if (searchArray) {
     render = true;
     searchArray.reverse();
-    searchArray = searchArray.filter((item, index) => index < 5);
   }
   return (
     <ul className={styles.searchOptionList}>
