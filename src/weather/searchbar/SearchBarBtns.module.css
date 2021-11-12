@@ -1,0 +1,51 @@
+@media only screen and (max-width: 749px) {
+  .btnContainer {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+
+  .searchBtn {
+    width: 45%;
+    font-weight: 500;
+    font-size: 16px;
+    color: #e7e7eb;
+    background: #6e707a;
+    border: none;
+  }
+
+  .geoLocation {
+    color: #e7e7eb;
+    background: #6e707a;
+  }
+
+  .geoLocation span {
+    vertical-align: middle;
+  }
+}
+
+.btnContainer {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.searchBtn {
+  width: 45%;
+  font-weight: 500;
+  font-size: 16px;
+  color: #e7e7eb;
+  background: #6e707a;
+  border: none;
+}
+
+.geoLocation {
+  color: #e7e7eb;
+  background: #6e707a;
+}
+
+.geoLocation span {
+  vertical-align: middle;
+}

@@ -1,7 +1,7 @@
 import Card from "../../UI/Card";
 import styles from "./WeatherForecast.module.css";
-import ImageFilter from "../../utilities/ImageFilter";
-import TemperatureUnitConverter from "../../utilities/TemperatureUnitConverter";
+import ImageFilter from "../../utils/ImageFilter";
+import TemperatureUnitConverter from "../../utils/TemperatureUnitConverter";
 
 const WeatherForecast = (props) => {
   const fiveForecast = props.forecast
@@ -48,7 +48,11 @@ const WeatherForecast = (props) => {
       </Card>
     );
   });
-  return <div className={styles.dailyForecast}> {card} </div>;
+  return (
+    <div className={styles.forecastContainer}>
+      <div className={styles.dailyForecast}> {card} </div>;
+    </div>
+  );
 };
 
 export default WeatherForecast;

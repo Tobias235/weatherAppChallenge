@@ -1,0 +1,28 @@
+@media only screen and (max-width: 749px) {
+  .btnContainer {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .btnContainer :first-child {
+    margin-right: 12px;
+  }
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.btnContainer :first-child {
+  margin-right: 12px;
+}
+
+.active {
+  background-color: #e7e7eb !important;
+  color: #110e3c !important;
+}

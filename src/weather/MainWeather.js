@@ -1,44 +1,22 @@
-import Button from "../UI/Button";
-import WeatherForecast from "./WeatherForecast/WeaterForecast";
+import WeatherForecast from "./mainWeather/WeaterForecast";
 import styles from "./MainWeather.module.css";
 import WeatherHighlights from "./weatherHighlight/WeatherHighlights";
+import MainWeatherBtns from "./mainWeather/MainWeatherBtns";
+import Footer from "./mainWeather/Footer";
 
 const MainWeather = (props) => {
-  const handleChangeUnit = (e) => {
-    props.onConvert(e.target.textContent);
-  };
-
-  const stylingF = props.unit === "°F" ? styles.active : null;
-  const stylingC = props.unit === "°C" ? styles.active : null;
-
   return (
     <div className={styles.mainWeather}>
       <div className={styles.mainContainer}>
-        <div className={styles.btnContainer}>
-          <Button className={stylingC} onClick={handleChangeUnit}>
-            °C
-          </Button>
-          <Button className={stylingF} onClick={handleChangeUnit}>
-            °F
-          </Button>
-        </div>
-        <div className={styles.forecastContainer}>
-          <WeatherForecast forecast={props.forecast} unit={props.unit} />
-        </div>
+        <MainWeatherBtns onConvert={props.onConvert} unit={props.unit} />
+        <WeatherForecast forecast={props.forecast} unit={props.unit} />
         <h1 className={styles.highlightTitle}>Today's Highlights</h1>
-        <div className={styles.weatherHighlights}>
-          <WeatherHighlights
-            weatherHighlights={props.weatherHighlights}
-            unit={props.unit}
-          />
-        </div>
+        <WeatherHighlights
+          weatherHighlights={props.weatherHighlights}
+          unit={props.unit}
+        />
       </div>
-      <footer>
-        <p>
-          created by <a href="https://tobias235.github.io/">Tobias235</a> -
-          devChallenges.io
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 };
