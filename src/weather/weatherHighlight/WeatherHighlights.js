@@ -2,7 +2,7 @@ import AirPressure from "./AirPressure";
 import Humidity from "./Humidity";
 import Visibilty from "./Visibility";
 import Wind from "./Wind";
-import styles from "./WeatherHighlights.module.css";
+import styles from "./WeatherHighlights.module.scss";
 
 const WeatherHighlights = (props) => {
   const wind = {

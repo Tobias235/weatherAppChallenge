@@ -1,4 +1,4 @@
-import styles from "./SearchBar.module.css";
+import styles from "./SearchBar.module.scss";
 import SearchBarBtns from "./searchbar/SearchBarBtns";
 import SearchBarWeather from "./searchbar/SearchBarWeather";
 

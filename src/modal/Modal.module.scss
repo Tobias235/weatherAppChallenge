@@ -1,0 +1,29 @@
+.searchModal {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  width: 25%;
+  height: auto;
+  position: fixed;
+  background-color: #1e213a;
+  z-index: 3;
+  @media (max-width: 1024px) {
+    width: 34.8%;
+  }
+  @media (max-width: 749px) {
+    width: 100%;
+  }
+}
+
+.closeBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  button {
+    color: #e7e7eb;
+    background-color: transparent;
+    border: none;
+  }
+}

@@ -1,0 +1,56 @@
+.humidity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 47%;
+  @media (max-width: 749px) {
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 22px;
+  }
+
+  h1 {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 36px;
+    :first-of-type {
+      font-size: 64px;
+      font-weight: 700;
+    }
+  }
+
+  .percentage {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  progress {
+    width: 70%;
+    appearance: none;
+  }
+
+  ::-webkit-progress-bar {
+    height: 10px;
+    border-radius: 20px;
+    background-color: #e7e7eb;
+  }
+
+  ::-webkit-progress-value {
+    height: 10px;
+    border-radius: 20px;
+    background-color: #ffec65;
+  }
+
+  .percentageSign {
+    width: 70%;
+    text-align: end;
+  }
+}

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@100;400;500;600;700&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -11,16 +12,4 @@ html {
 body {
   margin: 0;
   background-color: #100e1d;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-}
-
-@media only screen and (max-width: 749px) {
-  .container {
-    display: block;
-    width: 100%;
-  }
 }

@@ -1,4 +1,4 @@
-import styles from "./SearchList.module.css";
+import styles from "./SearchList.module.scss";
 
 const SearchList = (props) => {
   let searchArray = JSON.parse(localStorage.getItem("SearchesList"));
@@ -12,11 +12,7 @@ const SearchList = (props) => {
       {render &&
         searchArray.map((search) => {
           return (
-            <li
-              className={styles.listOption}
-              onClick={props.onPrevSearch}
-              key={Math.random()}
-            >
+            <li onClick={props.onPrevSearch} key={Math.random()}>
               {search}
             </li>
           );

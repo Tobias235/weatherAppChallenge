@@ -1,5 +1,5 @@
 import Card from "../../UI/Card";
-import styles from "./WeatherForecast.module.css";
+import styles from "./WeatherForecast.module.scss";
 import ImageFilter from "../../utils/ImageFilter";
 import TemperatureUnitConverter from "../../utils/TemperatureUnitConverter";
 

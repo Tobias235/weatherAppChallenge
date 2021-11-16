@@ -1,4 +1,4 @@
-import styles from "./MainWeatherBtns.module.css";
+import styles from "./MainWeatherBtns.module.scss";
 import Button from "../../UI/Button";
 
 const MainWeatherBtns = (props) => {

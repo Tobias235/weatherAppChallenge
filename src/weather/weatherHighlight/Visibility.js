@@ -1,5 +1,5 @@
 import Card from "../../UI/Card";
-import styles from "./Visibility.module.css";
+import styles from "./Visibility.module.scss";
 
 const Visibility = (props) => {
   const visibility = props.visibility;

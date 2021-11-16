@@ -1,5 +1,5 @@
 import WeatherForecast from "./mainWeather/WeaterForecast";
-import styles from "./MainWeather.module.css";
+import styles from "./MainWeather.module.scss";
 import WeatherHighlights from "./weatherHighlight/WeatherHighlights";
 import MainWeatherBtns from "./mainWeather/MainWeatherBtns";
 import Footer from "./mainWeather/Footer";

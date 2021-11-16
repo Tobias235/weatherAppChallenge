@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import styles from "./ModalForm.module.css";
+import styles from "./ModalForm.module.scss";
 
 const ModalForm = (props) => {
   const cityInputRef = useRef();
@@ -17,12 +17,7 @@ const ModalForm = (props) => {
 
   return (
     <form className={styles.searchModalBtn} onSubmit={searchHandler}>
-      <input
-        className={styles.input}
-        type="text"
-        placeholder="search location"
-        ref={cityInputRef}
-      />
+      <input type="text" placeholder="search location" ref={cityInputRef} />
       <button type="button" onClick={searchHandler}>
         Search
       </button>

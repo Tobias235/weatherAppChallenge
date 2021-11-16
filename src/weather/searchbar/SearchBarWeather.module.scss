@@ -1,0 +1,51 @@
+.img {
+  width: 150px;
+}
+
+.temp {
+  font-size: 48px;
+  font-weight: 100;
+  @media (max-width: 749px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .searchBarTemp {
+    font-size: 144px;
+    font-weight: 500;
+  }
+}
+
+.weatherDescription {
+  color: #a09fb1;
+  font-weight: 600;
+  font-size: 36px;
+  text-align: center;
+  @media (max-width: 749px) {
+    margin: 15px;
+  }
+}
+
+.searchBarDay {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+  color: #88869d;
+  font-size: 18px;
+  font-weight: 500;
+  @media (max-width: 749px) {
+    width: 40%;
+    margin: 25px;
+  }
+}
+
+.location {
+  margin-top: 20px;
+  color: #88869d;
+  font-size: 18px;
+  font-weight: 500;
+
+  :first-of-type {
+    vertical-align: middle;
+  }
+}

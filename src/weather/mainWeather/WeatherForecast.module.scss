@@ -1,0 +1,42 @@
+.forecastContainer {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  @media (max-width: 749px) {
+    width: 68%;
+  }
+
+  .dailyForecast {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1024px) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .forecastCard {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 120px;
+      height: 170px;
+      background-color: #1e213a;
+      @media (max-width: 1024px) {
+        margin: 10px;
+      }
+      img {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 30px;
+      }
+
+      span {
+        margin: 10px;
+      }
+    }
+  }
+}

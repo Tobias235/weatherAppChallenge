@@ -4,6 +4,7 @@ import MainWeather from "./weather/MainWeather";
 import SearchBar from "./weather/SearchBar";
 import Modal from "./modal/Modal";
 import useGetData from "./hooks/useGetData";
+import styles from "./App.module.scss";
 
 function App() {
   const [location, setLocation] = useState({
@@ -71,7 +72,7 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       {!loading && (
         <SearchBar
           weatherData={currentWeather}

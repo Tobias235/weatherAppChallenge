@@ -1,5 +1,5 @@
 import Card from "../../UI/Card";
-import styles from "./AirPressure.module.css";
+import styles from "./AirPressure.module.scss";
 
 const AirPressure = (props) => {
   return (

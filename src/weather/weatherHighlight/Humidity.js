@@ -1,12 +1,12 @@
 import Card from "../../UI/Card";
-import styles from "./Humidity.module.css";
+import styles from "./Humidity.module.scss";
 
 const Humidity = (props) => {
   return (
     <Card className={styles.humidity}>
       <p>Humidity</p>
       <h1>
-        <span className={styles.windSpeed}>{props.humidity}</span>%
+        <span>{props.humidity}</span>%
       </h1>
       <div className={styles.percentage}>
         <span>0</span>

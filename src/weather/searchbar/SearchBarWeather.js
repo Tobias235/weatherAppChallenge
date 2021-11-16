@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 import ImageFilter from "../../utils/ImageFilter";
-import styles from "./SearchBarWeather.module.css";
+import styles from "./SearchBarWeather.module.scss";
 
 const SearchBarWeather = (props) => {
   const image = ImageFilter(props.weatherData.weather[0].icon);

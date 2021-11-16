@@ -1,5 +1,5 @@
 import Card from "../../UI/Card";
-import styles from "./Wind.module.css";
+import styles from "./Wind.module.scss";
 
 const Wind = (props) => {
   let compass = [
@@ -34,11 +34,11 @@ const Wind = (props) => {
     <Card className={styles.wind}>
       <p>Wind Status</p>
       <h1>
-        <span className={styles.windSpeed}>{speed.toFixed(2)} </span>
+        <span>{speed.toFixed(2)} </span>
         {imperial}
       </h1>
       <div>
-        <span style={style} className={`${"material-icons"} ${styles.icon}`}>
+        <span style={style} className="material-icons">
           navigation
         </span>
         <span className={styles.direction}>{windDirection}</span>

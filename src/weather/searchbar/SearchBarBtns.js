@@ -1,5 +1,5 @@
 import Button from "../../UI/Button";
-import styles from "./SearchBarBtns.module.css";
+import styles from "./SearchBarBtns.module.scss";
 
 const SearchBarBtns = (props) => {
   return (
