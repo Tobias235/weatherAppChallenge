@@ -35,7 +35,7 @@
 
 ## Overview
 
-![screenshot](src\assets\weatherApp.png)
+![screenshot](src/assets/weatherApp.png)
 
 It was a fun project and a little challenging to get all features to work. I am happy with the end result and everything works.
 I've learnt to use geolocation and get the users coordinates and render the weather data of their current position. I continue to improve my coding for every project I do and try to keep my code and file less messy and crowded.
