@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Country Quiz</h1>
+<h1 align="center">Weather App</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -35,7 +35,7 @@
 
 ## Overview
 
-![screenshot](src\assets\githubimage.PNG)
+![screenshot](src/assets/githubimage.PNG)
 
 It was a fun project and a little challenging to get all features to work. I am happy with the end result and everything works.
 I've learnt to use geolocation and get the users coordinates and render the weather data of their current position. I continue to improve my coding for every project I do and try to keep my code and file less messy and crowded.
