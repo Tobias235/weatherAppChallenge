@@ -40,7 +40,7 @@ const WeatherForecast = (props) => {
             {unitConverter.max.toFixed(0)}
             {props.unit}
           </span>
-          <span>
+          <span className={styles.min}>
             {unitConverter.min.toFixed(0)}
             {props.unit}
           </span>
